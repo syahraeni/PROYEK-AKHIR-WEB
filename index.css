@@ -70,4 +70,39 @@ body {
 	box-shadow: 2px 2px 10px rgba(0,0,0,0.4);	
 }
 
+/* CSS untuk metode pembayaran */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* CSS untuk nota pesanan */
+.nota-container {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.nota-container h4 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.nota-container table {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.nota-container table th, .nota-container table td {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.nota-container table tfoot {
+    font-weight: bold;
+}
+
+
 /*Akhir Home*/

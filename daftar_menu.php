@@ -18,24 +18,44 @@
     <link rel="stylesheet" type="text/css" href="index.css">
     <link rel="stylesheet" type="text/css" href="fontawesome/css/all.min.css">
 
-    <title>Bakso Solo Baru</title>
+    <title>Dapur Mahasiswa</title>
+    <style>
+      .navbar-pink {
+        background-color: #c9184a !important; /* Warna pink */
+      }
+      .navbar-nav {
+        color: white !important; /* Mengubah warna teks menjadi putih */
+        font-family: 'Poppins', sans-serif;
+      }
+      .navbar-nav .nav-link {
+        color: white !important; /* Warna teks navbar item menjadi putih */
+        font-family: 'Poppins', sans-serif;
+      }
+      .btn-custom {
+        background-color: #c9184a; /* Warna pink yang diinginkan */
+        color: white;
+        border: none;
+        font-family: 'Poppins', sans-serif;
+      }
+      .btn-custom:hover {
+        background-color: #FFB6C1; /* Warna hover yang diinginkan */
+        color: black;
+      }
+      .judul h3, .judul h5 {
+        font-family: 'Poppins', sans-serif;
+      }
+    </style>
   </head>
   <body>
   <!-- Jumbotron -->
       <div class="jumbotron jumbotron-fluid text-center">
-        <div class="container">
-          <h1 class="display-4"><span class="font-weight-bold">BAKSO SOLO BARU</span></h1>
-          <hr>
-          <p class="lead font-weight-bold">Silahkan Pesan Menu Sesuai Keinginan Anda <br> 
-          Enjoy Your Meal</p>
-        </div>
       </div>
   <!-- Akhir Jumbotron -->
 
   <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg  bg-dark">
+      <nav class="navbar navbar-expand-lg navbar-pink">
         <div class="container">
-        <a class="navbar-brand text-white" href="admin.php"><strong>Bakso</strong> Solo Baru</a>
+        <a class="navbar-brand text-white" href="admin.php"><strong>Dapur Mahasiswa</strong> </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -102,7 +122,7 @@
         <div class="row footer-body">
           <div class="col-md-6">
           <div class="copyright">
-            <strong>Copyright</strong> <i class="far fa-copyright"></i> 2020 -  Designed by Alfirdaus&Rinaldo</p>
+            <strong>Copyright</strong> <i class="far fa-copyright"></i> 2024 - Dapur Mahasiswa</p>
           </div>
           </div>
 

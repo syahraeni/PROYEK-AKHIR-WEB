@@ -1,14 +1,14 @@
 <?php 
     session_start();
-      if(!isset($_SESSION['login_user'])) {
+    if(!isset($_SESSION['login_user'])) {
         header("location: login.php");
-      }else{
+    }else{
 ?>
 
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
+<head>
+    <!-- Meta tag yang diperlukan -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -18,24 +18,50 @@
     <link rel="stylesheet" type="text/css" href="index.css">
     <link rel="stylesheet" type="text/css" href="fontawesome/css/all.min.css">
 
-    <title>Bakso Solo Baru</title>
-  </head>
-  <body>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
+    <title>Dapur Mahasiswa</title>
+    <style>
+      .navbar-pink {
+        background-color: #c9184a !important; /* Warna pink */
+      }
+      .navbar-nav {
+        color: white !important; /* Mengubah warna teks menjadi putih */
+        font-family: 'Poppins', sans-serif;
+      }
+      .navbar-nav .nav-link {
+        color: white !important; /* Warna teks navbar item menjadi putih */
+        font-family: 'Poppins', sans-serif;
+      }
+      .btn-custom {
+        background-color: #c9184a; /* Warna pink yang diinginkan */
+        color: white;
+        border: none;
+        font-family: 'Poppins', sans-serif;
+      }
+      .btn-custom:hover {
+        background-color: #FFB6C1; /* Warna hover yang diinginkan */
+        color: black;
+      }
+      .judul h3, .judul h5 {
+        font-family: 'Poppins', sans-serif;
+      }
+    </style>
+</head>
+<body>
   <!-- Jumbotron -->
       <div class="jumbotron jumbotron-fluid text-center">
-        <div class="container">
-          
-          <hr>
-         
-        </div>
+        
       </div>
   <!-- Akhir Jumbotron -->
 
   <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg  bg-dark">
+      <nav class="navbar navbar-expand-lg navbar-pink">
         <div class="container">
-        <a class="navbar-brand text-white" href="admin.php"><strong>Bakso</strong> Solo Baru</a>
+        <a class="navbar-brand text-white" href="admin.php"><strong>Dapur Mahasiswa</strong></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -61,33 +87,22 @@
   <!-- Akhir Navbar -->
 
   <!-- Menu -->    
-      <div class="container">
-        <div class="judul text-center mt-5">
-          <h3 class="font-weight-bold">BAKSO SOLO BARU</h3>
-          <h5>Bukit Kemuning, Tanjung Piayu, Batam
-          <br>Buka Jam <strong>16:00 - 23:00</strong></h5>
-        </div>
+  <div class="container">
+    <div class="judul text-center mt-5">
+      <h3 class="font-weight-bold">Dapur Mahasiswa Institut Teknologi Bacharuddin Jusuf Habibie</h3>
+      <h5>Jl. Pemuda No.6, Kota Pare-Pare, Sulawesi Selatan
+      <br>Buka Jam <strong>08.30 - 17:00</strong></h5>
+    </div>
 
-        <div class="row mb-5 mt-5 ">
-          <div class="col-md-6 d-flex justify-content-end">
-            <div class="card bg-dark text-white border-light">
-              <img src="images/background/menu2.jpg" class="card-img" alt="Lihat Daftar Menu">
-              <div class="card-img-overlay mt-5 text-center">
-               <a href="daftar_menu.php" class="btn btn-primary">LIHAT DAFTAR MENU</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 d-flex justify-content-start">
-            <div class="card bg-dark text-white border-light">
-              <img src="images/background/menu3.jpg" class="card-img" alt="Lihat Pesanan">
-              <div class="card-img-overlay mt-5 text-center">
-               <a href="pesanan.php" class="btn btn-primary">LIHAT PESANAN</a>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div class="row mb-5 mt-5">
+      <div class="col-md-6 d-flex justify-content-center mb-3">
+        <a href="menu_pembeli.php" class="btn btn-custom btn-lg">LIHAT DAFTAR MENU</a>
       </div>
+      <div class="col-md-6 d-flex justify-content-center mb-3">
+        <a href="pesanan_pembeli.php" class="btn btn-custom btn-lg">LIHAT PESANAN</a>
+      </div>
+    </div>
+  </div>
   <!-- Akhir Menu -->
 
   <!-- Awal Footer -->
@@ -96,7 +111,7 @@
         <div class="row footer-body">
           <div class="col-md-6">
           <div class="copyright">
-            <strong>Copyright</strong> <i class="far fa-copyright"></i> 2020 -  Designed by Alfirdaus&Rinaldo</p>
+            <strong>Copyright</strong> <i class="far fa-copyright"></i> 2024 - Dapur Mahasiswa </p>
           </div>
           </div>
 
@@ -111,7 +126,6 @@
         </div>
       </div>
   <!-- Akhir Footer -->
-
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

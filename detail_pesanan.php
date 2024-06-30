@@ -21,24 +21,21 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
 
-    <title>Bakso Solo Baru</title>
+    <title>Dapur Mahasiswa</title>
   </head>
   <body>
   <!-- Jumbotron -->
       <div class="jumbotron jumbotron-fluid text-center">
         <div class="container">
-          <h1 class="display-4"><span class="font-weight-bold">BAKSO SOLO BARU</span></h1>
-          <hr>
-          <p class="lead font-weight-bold">Silahkan Pesan Menu Sesuai Keinginan Anda <br> 
-          Enjoy Your Meal</p>
+      
         </div>
       </div>
   <!-- Akhir Jumbotron -->
 
   <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg  bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-pink">
         <div class="container">
-        <a class="navbar-brand text-white" href="admin.php"><strong>Bakso</strong> Solo Baru</a>
+        <a class="navbar-brand text-white" href="admin.php"><strong>Dapur Mahasiswa</strong></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
