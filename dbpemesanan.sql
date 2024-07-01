@@ -145,8 +145,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id_user`, `username`, `password`, `nama_lengkap`, `jenis_kelamin`, `tanggal_lahir`, `alamat`, `hp`, `status`) VALUES
-(1, 'daus', 'daus123', 'Alfirdaus Muhammad Farhan', 'Laki-Laki', '1998-05-14', 'Tanjung Piayu', '089560328673', 'admin'),
-(2, 'rinaldo', 'rinaldo123', 'Rinaldo', 'Laki-Laki', '1999-01-11', 'Tanjung Uma', '085233748222', 'user');
+(1, 'admin', 'admin', 'Syahraeni Salsabila', 'Perempuan', '2004-05-14', 'Parepare', '089560328673', 'admin'),
+(2, 'irgi', 'irgi', 'Irgi', 'Laki-Laki', '2004-01-11', 'Parepare', '085233748222', 'user');
 
 
 --
