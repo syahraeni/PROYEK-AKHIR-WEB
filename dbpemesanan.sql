@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 14 Nov 2020 pada 07.40
--- Versi server: 10.4.11-MariaDB
--- Versi PHP: 7.4.3
+-- Waktu pembuatan: 06 Jul 2024 pada 05.56
+-- Versi server: 10.4.32-MariaDB
+-- Versi PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -31,19 +30,39 @@ SET time_zone = "+00:00";
 CREATE TABLE `pemesanan` (
   `id_pemesanan` int(50) NOT NULL,
   `tanggal_pemesanan` date NOT NULL,
-  `total_belanja` int(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `total_belanja` int(50) NOT NULL,
+  `metode_pembayaran` int(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data untuk tabel `pemesanan`
 --
 
-INSERT INTO `pemesanan` (`id_pemesanan`, `tanggal_pemesanan`, `total_belanja`) VALUES
-(35, '2020-06-22', 50000),
-(38, '2020-06-22', 17000),
-(39, '2020-06-22', 25000),
-(40, '2020-06-22', 22000),
-(41, '2020-06-22', 56000);
+INSERT INTO `pemesanan` (`id_pemesanan`, `tanggal_pemesanan`, `total_belanja`, `metode_pembayaran`) VALUES
+(43, '2024-06-09', 13000, 0),
+(44, '2024-06-09', 17000, 0),
+(45, '2024-06-10', 17000, 0),
+(46, '2024-06-11', 26000, 0),
+(47, '2024-06-12', 30000, 0),
+(48, '2024-06-12', 17000, 0),
+(49, '2024-06-13', 23000, 0),
+(50, '2024-06-20', 14000, 0),
+(51, '2024-06-24', 47000, 0),
+(52, '2024-06-24', 10000, 0),
+(53, '2024-06-24', 10000, 0),
+(54, '2024-06-24', 12000, 0),
+(55, '2024-06-25', 50000, 0),
+(56, '2024-06-25', 8000, 0),
+(57, '2024-06-25', 20000, 0),
+(58, '2024-06-25', 13000, 0),
+(59, '2024-06-25', 22000, 0),
+(60, '2024-06-25', 13000, 0),
+(61, '2024-06-25', 26000, 0),
+(62, '2024-06-28', 40000, 0),
+(63, '2024-06-28', 46000, 0),
+(64, '2024-06-30', 64000, 0),
+(65, '2024-07-06', 13000, 0),
+(66, '2024-07-06', 8000, 0);
 
 -- --------------------------------------------------------
 
@@ -56,7 +75,7 @@ CREATE TABLE `pemesanan_produk` (
   `id_pemesanan` int(50) NOT NULL,
   `id_menu` varchar(50) NOT NULL,
   `jumlah` int(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data untuk tabel `pemesanan_produk`
@@ -87,7 +106,46 @@ INSERT INTO `pemesanan_produk` (`id_pemesanan_produk`, `id_pemesanan`, `id_menu`
 (28, 42, '9', 1),
 (29, 42, '14', 1),
 (30, 42, '7', 1),
-(31, 42, '17', 1);
+(31, 42, '17', 1),
+(32, 43, '7', 1),
+(33, 44, '8', 1),
+(34, 45, '7', 1),
+(35, 45, '17', 1),
+(36, 46, '7', 2),
+(37, 47, '9', 1),
+(38, 47, '14', 1),
+(39, 48, '8', 1),
+(40, 49, '7', 1),
+(41, 49, '14', 1),
+(42, 50, '12', 1),
+(43, 50, '10', 1),
+(44, 51, '8', 1),
+(45, 51, '11', 1),
+(46, 51, '13', 1),
+(47, 51, '6', 1),
+(48, 52, '14', 1),
+(49, 53, '14', 1),
+(50, 54, '6', 1),
+(51, 55, '9', 2),
+(52, 55, '11', 1),
+(53, 56, '13', 1),
+(54, 57, '9', 1),
+(55, 58, '7', 1),
+(56, 59, '15', 1),
+(57, 59, '10', 1),
+(58, 60, '7', 1),
+(59, 61, '7', 2),
+(60, 62, '9', 2),
+(61, 63, '7', 2),
+(62, 63, '6', 1),
+(63, 63, '13', 1),
+(64, 64, '6', 2),
+(65, 64, '11', 1),
+(66, 64, '13', 2),
+(67, 64, '14', 1),
+(68, 64, '17', 1),
+(69, 65, '7', 1),
+(70, 66, '13', 1);
 
 -- --------------------------------------------------------
 
@@ -102,7 +160,7 @@ CREATE TABLE `produk` (
   `stok` int(50) NOT NULL,
   `harga` int(50) NOT NULL,
   `gambar` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data untuk tabel `produk`
@@ -120,7 +178,8 @@ INSERT INTO `produk` (`id_menu`, `nama_menu`, `jenis_menu`, `stok`, `harga`, `ga
 (14, 'Jus Alpukat', 'Minuman', 50, 10000, 'juspukat.jpg'),
 (15, 'Jus Mangga', 'Minuman', 50, 10000, 'jusmangga.jpg'),
 (16, 'Teh Obeng', 'Minuman', 60, 5000, 'tehobeng.jpg'),
-(17, 'Air Mineral', 'Minuman', 100, 4000, 'sanford.jpg');
+(17, 'Air Mineral', 'Minuman', 100, 4000, 'sanford.jpg'),
+(25, 'Ayam Goreng', '', 9999, 25000, 'ayam goreng.jpg');
 
 -- --------------------------------------------------------
 
@@ -138,19 +197,18 @@ CREATE TABLE `user` (
   `alamat` varchar(25) NOT NULL,
   `hp` varchar(25) NOT NULL,
   `status` enum('admin','user','','') NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data untuk tabel `user`
 --
 
 INSERT INTO `user` (`id_user`, `username`, `password`, `nama_lengkap`, `jenis_kelamin`, `tanggal_lahir`, `alamat`, `hp`, `status`) VALUES
-(1, 'daus', 'daus123', 'Alfirdaus Muhammad Farhan', 'Laki-Laki', '1998-05-14', 'Tanjung Piayu', '089560328673', 'admin'),
-(2, 'rinaldo', 'rinaldo123', 'Rinaldo', 'Laki-Laki', '1999-01-11', 'Tanjung Uma', '085233748222', 'user'),
-(3, 'admin', 'admin', 'Alfirdaus Muhammad Farhan', 'Laki-Laki', '1998-05-19', 'Tanjung Piayu', '089123614882', 'admin'),
-(4, 'user', 'user', 'Rinaldo', 'Laki-Laki', '1998-10-22', 'Tanjung Uma', '089560328673', 'user'),
-(5, 'rinaldo', 'rinaldo', 'Rinaldo', 'Laki-Laki', '1999-02-23', 'Tanjung Uma', '089123614882', 'user'),
-(6, 'daus', 'daus123', 'Alfirdaus Muhammad Farhan', 'Laki-Laki', '1998-05-14', 'Tanjung Piayu', '085233748222', 'admin');
+(7, 'irgi', 'irgi', 'Irgi A', 'Laki-Laki', '2003-09-01', 'Jl. Baumassepe no.19', '085688278321', 'user'),
+(8, 'dara', 'dara', 'daraa', 'Perempuan', '2005-01-01', 'Jl. Baumassepe no.17', '081737549387', 'user'),
+(11, 'dhara', 'dhara', 'dhara', 'Perempuan', '2004-03-01', 'Jl. Baumassepe no.17', '081737549366', 'user'),
+(13, 'admin@admin.com', 'admin', 'admin', 'Perempuan', '2004-03-02', 'parepare', '083757653652', 'admin'),
+(14, 'dikriani', 'dikri11', 'Dikriani', 'Perempuan', '2004-03-09', 'jl. pembangunan ', '', '');
 
 --
 -- Indexes for dumped tables
@@ -188,25 +246,25 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT untuk tabel `pemesanan`
 --
 ALTER TABLE `pemesanan`
-  MODIFY `id_pemesanan` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+  MODIFY `id_pemesanan` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
 
 --
 -- AUTO_INCREMENT untuk tabel `pemesanan_produk`
 --
 ALTER TABLE `pemesanan_produk`
-  MODIFY `id_pemesanan_produk` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id_pemesanan_produk` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
 
 --
 -- AUTO_INCREMENT untuk tabel `produk`
 --
 ALTER TABLE `produk`
-  MODIFY `id_menu` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id_menu` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT untuk tabel `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(25) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_user` int(25) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
