@@ -204,11 +204,17 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id_user`, `username`, `password`, `nama_lengkap`, `jenis_kelamin`, `tanggal_lahir`, `alamat`, `hp`, `status`) VALUES
+<<<<<<< HEAD
 (7, 'irgi', 'irgi', 'Irgi A', 'Laki-Laki', '2003-09-01', 'Jl. Baumassepe no.19', '085688278321', 'user'),
 (8, 'dara', 'dara', 'daraa', 'Perempuan', '2005-01-01', 'Jl. Baumassepe no.17', '081737549387', 'user'),
 (11, 'dhara', 'dhara', 'dhara', 'Perempuan', '2004-03-01', 'Jl. Baumassepe no.17', '081737549366', 'user'),
 (13, 'admin@admin.com', 'admin', 'admin', 'Perempuan', '2004-03-02', 'parepare', '083757653652', 'admin'),
 (14, 'dikriani', 'dikri11', 'Dikriani', 'Perempuan', '2004-03-09', 'jl. pembangunan ', '', '');
+=======
+(1, 'admin', 'admin', 'Syahraeni Salsabila', 'Perempuan', '2004-05-14', 'Parepare', '089560328673', 'admin'),
+(2, 'irgi', 'irgi', 'Irgi', 'Laki-Laki', '2004-01-11', 'Parepare', '085233748222', 'user');
+
+>>>>>>> 125e47d401b3e175d9383793be2c80c946c1ad20
 
 --
 -- Indexes for dumped tables
